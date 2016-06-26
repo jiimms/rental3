@@ -4,19 +4,35 @@
   <strong>Category:</strong>
   <%= @product.category %>
 </p>
- 	<%if @product.category == "Books"%>
+<div class ="row">
+ 	<%if (@product.category == "Books")%>
 		<%@product.items.each do |i|%>
+		<div class ="col col-md-3">
+			<div class ="eachItem">
+				<div class ="image-wrapper">
 			<p>Book Title:<%=i.item_for_rent%> </p><p>Author Name <%=i.brand%></p>
-			<p><%=i.rental_cost%> | 
+			<p>Rent:<%= i.rental_cost%> | 
 			<%= image_tag i.image.image.url, class: "recipe_image" %>
+			</div>
+			</div> 
+			</div> 
 		<%end%>
 	<%else%>
+
 		<%@product.items.each do |i|%>
-			<p>Item Name:<%=i.item_for_rent%> </p><p>Brand:  <%=i.brand%></p>
-			<p><%=i.rental_cost%> | 
+		<div class ="col col-md-3">
+			<div class ="eachItem">
+				<div class ="image-wrapper">
+			
 			<%= image_tag i.image.image.url, class: "recipe_image" %>
+			<br>Item Name:<%=i.item_for_rent%><br> Brand:  <%=i.brand%>
+			<br>Rent:<%=i.rental_cost%>
+			</div>
+			</div> 
+			</div> 
 		<%end%>
 	<%end%>
+</div>
 
 
 

@@ -48,6 +48,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:category, items_attributes: [:id,:brand, :rental_cost, :item_for_rent, :image, :_destroy])
+      params.require(:product).permit(:category, :image, items_attributes: [:id,:brand, :rental_cost, :item_for_rent, :image, :_destroy])
     end
 end

@@ -42,10 +42,11 @@ body {
 	}
 }
 
-.recipe {
-	background: white;
+.eachItem {
+	background: gray;
 	border-radius: 5px;
 	margin-bottom: 40px;
+	padding: 1em;
 	@include box-shadow;
 	.image_wrapper {
 		max-width: 100%;
@@ -78,13 +79,15 @@ body {
 	margin-bottom: 50px;
 }
 
-#recipe_info, #items {
+ #items, #products {
 	background: white;
 	@include box-shadow;
 	min-height: 300px;
 	border-radius: 5px;
-	padding: 2em 8%;
+	padding: 1em 8%;
 }
+
+
 	.submit {
 	margin-top: 10px;
 	}
@@ -131,4 +134,10 @@ body {
 }
 .add-button {
 	margin-top: 25px;
+}
+
+.first {
+	border-bottom: 0.3px solid gray;
+	padding-bottom: 15px;
+	padding-top: 15px;
 }
