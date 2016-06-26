@@ -141,3 +141,42 @@ body {
 	padding-bottom: 15px;
 	padding-top: 15px;
 }
+
+.min_wrapper {
+	
+	margin: 30px 0;
+	/*border: 2px solid red;*/
+	min-height: 300px;
+}
+
+.wrapper {
+	background-color: orange;
+	/*border-top-left-radius: 85px;*/
+	border: 2px solid red;
+	animation: mymove 2s;
+	animation-timing-function: ease-out;
+
+}
+@-webkit-keyframes mymove {
+    50% {border-top-left-radius: 2500px;
+    	border-top-right-radius: 900px;
+    	border-bottom-left-radius: 1200px;
+    	border-bottom-right-radius: 900px;}
+
+}
+
+.login_wrapper {
+	background-color: orange;
+	/*border-top-left-radius: 85px;*/
+	border: 2px solid red;
+	animation: mymovel 2s;
+	animation-timing-function: ease-out;
+
+}
+@-webkit-keyframes mymovel {
+    50% {border-top-left-radius: 1500px;
+    	border-top-right-radius: 1000px;
+    	border-bottom-left-radius: 1800px;
+    	border-bottom-right-radius: 2700px;}
+
+}
