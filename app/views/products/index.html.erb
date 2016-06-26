@@ -14,8 +14,8 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= link_to product.category, product %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><% link_to 'Show', product %></td>
+        <td><%= link_to 'Edit or Add new Items', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -24,16 +24,6 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
 
 
-<p>Problem Statement: This project aims at creating a Rental website where the user can rent anything online in a simple manner. <br>
-Expected Output ::
-<ul>
-<li> Hospital equipment like –walker, wheelchair, etc. </li>
-<li>Hiking gear </li>
-<li>Rent bikes and cars </li>
-<li>Rent Books </li>
-<li>Rent Electrical Equipment </li>
-</ul>
-</p>

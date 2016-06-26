@@ -1,18 +1,20 @@
-<div class = "form-inline clearfix">
-	<div class= "nested-fields">
+<div class = "clearfix">
+	
 		<%if @product.category == "Books"%>
-			<%= f.input :item_for_rent, required: true%>
-			<%= f.label :brand, "Author"%>
-			<%= f.input :brand, label: false%>
-			<%= f.input :rental_cost,required: true%>
-			<%= f.file_field :image%>
+			<%= f.input :item_for_rent, required: true, input_html: {class: "form-control"}%>
+			<%= f.label :brand, "Author", input_html: {class: "form-control"}%>
+			<%= f.input :brand, label: false, input_html: {class: "form-control"}%>
+			<%= f.input :rental_cost,required: true, input_html: {class: "form-control"}%>
+			<%= f.file_field :image, input_html: {class: "form-control"}%>
 		<%else%>
-		<%= f.input :item_for_rent, required: true%>
-			
-			<%= f.input :brand%>
-			<%= f.input :rental_cost,required: true%>
-			<%= f.file_field :image%>
+			<%= f.input :item_for_rent, required: true, input_html: {class: "form-control"}%>
+			<%= f.input :brand, input_html: {class: "form-control"}%>
+			<%= f.input :rental_cost,required: true, input_html: {class: "form-control"}%>
+			<%= f.label :image, "Add Image", input_html: {class: "form-control"}%>
+			<%= f.file_field :image, input_html: {class: "form-control"}%>
+
 		<%end%>
-		<%= link_to_remove_association "Remove", f %>
-	</div>
-</div>
+		</div>
+		
+		<p class= "submit"><%= link_to_remove_association "Remove", f,class: "btn btn-default" %>
+		
