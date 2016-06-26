@@ -1,0 +1,18 @@
+<div class = "form-inline clearfix">
+	<div class= "nested-fields">
+		<%if @product.category == "Books"%>
+			<%= f.input :item_for_rent, required: true%>
+			<%= f.label :brand, "Author"%>
+			<%= f.input :brand, label: false%>
+			<%= f.input :rental_cost,required: true%>
+			<%= f.file_field :image%>
+		<%else%>
+		<%= f.input :item_for_rent, required: true%>
+			
+			<%= f.input :brand%>
+			<%= f.input :rental_cost,required: true%>
+			<%= f.file_field :image%>
+		<%end%>
+		<%= link_to_remove_association "Remove", f %>
+	</div>
+</div>

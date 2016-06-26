@@ -1,9 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @product.type %>
+  <strong>Category:</strong>
+  <%= @product.category %>
 </p>
+ 	<%if @product.category == "Books"%>
+		<%@product.items.each do |i|%>
+			<p>Book Title:<%=i.item_for_rent%> </p><p>Author Name <%=i.brand%></p>
+			<p><%=i.rental_cost%> | 
+			<%= image_tag i.image.image.url, class: "recipe_image" %>
+		<%end%>
+	<%else%>
+		<%@product.items.each do |i|%>
+			<p>Item Name:<%=i.item_for_rent%> </p><p>Brand:  <%=i.brand%></p>
+			<p><%=i.rental_cost%> | 
+			<%= image_tag i.image.image.url, class: "recipe_image" %>
+		<%end%>
+	<%end%>
+
+
+
+
+
+
+
+
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
