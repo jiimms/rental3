@@ -1,3 +1,5 @@
+
+
 <h1>Listing Products</h1>
   <% @products.each do |product| %>
       <div class ="row first">
@@ -7,7 +9,7 @@
             <div class ="row">
               <%product.items.each do |i|%>
                 <div class="col col-md-2">
-                  <%=image_tag i.image.image.url,   class: "recipe_image" %>
+                  <%=image_tag i.image.image.url,   class: "item_image" %>
                   <br>Item:<%=i.item_for_rent%><br>
                 </div>
               <%end%>

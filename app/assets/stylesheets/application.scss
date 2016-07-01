@@ -91,7 +91,7 @@ body {
 	.submit {
 	margin-top: 10px;
 	}
-.recipe_image {
+.item_image {
 	max-width: 100%;
 	border-radius: 5px;
 	@include box-shadow;
@@ -119,6 +119,7 @@ body {
 		}
 	}
 }
+
 
 .form-inline {
 	margin-top: 15px;
@@ -179,4 +180,65 @@ body {
     	border-bottom-left-radius: 1800px;
     	border-bottom-right-radius: 2700px;}
 
+}
+
+.thumb_image {
+	width: 80px
+}
+
+
+tr {
+    height: 120px;
+    border-bottom: 1px solid lightGray;
+}
+.table_header {
+    height: 50px;
+    
+    
+}
+
+th {
+	text-align: center;
+}
+
+.cart_page {
+	background-color: white;
+	padding: 40px 80px;
+
+}
+
+.cart_page_h1 {
+	/*text-align: center;*/
+	margin-bottom: 60px;
+	
+}
+
+.subtotal {
+	background-color: rgba(255,165,0,0.8);
+	padding:60px 80px;
+	border: 1px solid red;
+
+}
+
+.cart_value {
+	font-weight: bolder;
+	font-size: 17px;
+
+}
+
+.checkout {
+	font-size: 15px;
+	
+
+	box-shadow: 2px 2px 2px gray;
+}
+
+.before_checkout {
+	padding: 8px;
+	margin-top: 50px;
+}
+
+.price {
+	color: #B12704;
+	font-weight: bold;
 }

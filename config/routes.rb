@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  
   devise_for :users
+
+  get '/cart' => 'cart#index'
+  get '/cart/clear' => 'cart#clearCart'
+  get '/cart/:id' => 'cart#add'
+
   resources :products
    root 'products#index'
   # The priority is based upon order of creation: first created -> highest priority.
